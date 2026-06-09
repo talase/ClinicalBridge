@@ -7,5 +7,45 @@
     "alert_type": "High Blood Pressure",
     "reading": "190/120",
     "urgency": "Critical"
+  },
+
+  {
+    "alert_id": "A002",
+    "patient_id": "P002",
+    "timestamp": "2026-05-11T09:30:00",
+    "device_type": "Glucose Monitor",
+    "alert_type": "High Glucose",
+    "reading": "320 mg/dL",
+    "urgency": "Urgent"
+  },
+
+  {
+    "alert_id": "A003",
+    "patient_id": "P003",
+    "timestamp": "2026-05-12T16:20:00",
+    "device_type": "Weight Monitor",
+    "alert_type": "Rapid Weight Gain",
+    "reading": "+4kg in 2 weeks",
+    "urgency": "Urgent"
+  },
+
+  {
+    "alert_id": "A004",
+    "patient_id": "P004",
+    "timestamp": "2026-05-13T11:10:00",
+    "device_type": "Oxygen Monitor",
+    "alert_type": "Low Oxygen Saturation",
+    "reading": "88%",
+    "urgency": "Critical"
+  },
+
+  {
+    "alert_id": "A005",
+    "patient_id": "P005",
+    "timestamp": "2026-05-14T08:45:00",
+    "device_type": "Blood Pressure Monitor",
+    "alert_type": "Low Blood Pressure",
+    "reading": "85/60",
+    "urgency": "Routine"
   }
 ]

@@ -12,5 +12,63 @@
     "family_history": [
       "Father had hypertension"
     ]
+  },
+
+  {
+    "patient_id": "P002",
+    "symptoms": [
+      "Fatigue",
+      "Frequent thirst"
+    ],
+    "medication_adherence": "Taking medication regularly",
+    "lifestyle_notes": [
+      "Recently consumed sugary foods during holiday"
+    ],
+    "family_history": [
+      "Mother had diabetes"
+    ]
+  },
+
+  {
+    "patient_id": "P003",
+    "symptoms": [
+      "Ankle swelling",
+      "Shortness of breath"
+    ],
+    "medication_adherence": "Missed medication twice this week",
+    "lifestyle_notes": [
+      "Low physical activity"
+    ],
+    "family_history": [
+      "Family history of heart disease"
+    ]
+  },
+
+  {
+    "patient_id": "P004",
+    "symptoms": [
+      "Chest tightness",
+      "Difficulty breathing"
+    ],
+    "medication_adherence": "Using inhaler frequently",
+    "lifestyle_notes": [
+      "Exposed to dust at home"
+    ],
+    "family_history": []
+  },
+
+  {
+    "patient_id": "P005",
+    "symptoms": [
+      "Weakness",
+      "Lightheadedness"
+    ],
+    "medication_adherence": "Taking medication regularly",
+    "lifestyle_notes": [
+      "Low water intake"
+    ],
+    "family_history": [
+      "History of kidney disease"
+    ]
   }
 ]

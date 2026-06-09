@@ -17,5 +17,76 @@
       "cholesterol": "220 mg/dL",
       "glucose": "105 mg/dL"
     }
+  },
+
+  {
+    "patient_id": "P002",
+    "name": "Sarah Johnson",
+    "age": 64,
+    "gender": "Female",
+    "diagnoses": [
+      "Type 2 Diabetes"
+    ],
+    "medications": [
+      "Metformin"
+    ],
+    "allergies": [],
+    "recent_labs": {
+      "glucose": "250 mg/dL",
+      "HbA1c": "8.5%"
+    }
+  },
+
+  {
+    "patient_id": "P003",
+    "name": "Michael Brown",
+    "age": 72,
+    "gender": "Male",
+    "diagnoses": [
+      "Heart Failure"
+    ],
+    "medications": [
+      "Furosemide"
+    ],
+    "allergies": [],
+    "recent_labs": {
+      "BNP": "600 pg/mL"
+    }
+  },
+
+  {
+    "patient_id": "P004",
+    "name": "Emily Davis",
+    "age": 45,
+    "gender": "Female",
+    "diagnoses": [
+      "Asthma"
+    ],
+    "medications": [
+      "Albuterol"
+    ],
+    "allergies": [
+      "Dust"
+    ],
+    "recent_labs": {
+      "oxygen_saturation": "96%"
+    }
+  },
+
+  {
+    "patient_id": "P005",
+    "name": "Robert Wilson",
+    "age": 67,
+    "gender": "Male",
+    "diagnoses": [
+      "Chronic Kidney Disease"
+    ],
+    "medications": [
+      "Losartan"
+    ],
+    "allergies": [],
+    "recent_labs": {
+      "creatinine": "2.1 mg/dL"
+    }
   }
 ]
