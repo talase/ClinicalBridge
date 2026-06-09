@@ -1,0 +1,11 @@
+[
+  {
+    "alert_id": "A001",
+    "patient_id": "P001",
+    "timestamp": "2026-05-10T14:00:00",
+    "device_type": "Blood Pressure Monitor",
+    "alert_type": "High Blood Pressure",
+    "reading": "190/120",
+    "urgency": "Critical"
+  }
+]

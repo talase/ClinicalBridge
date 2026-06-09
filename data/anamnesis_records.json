@@ -1,0 +1,16 @@
+[
+  {
+    "patient_id": "P001",
+    "symptoms": [
+      "Headache",
+      "Dizziness"
+    ],
+    "medication_adherence": "Stopped taking medication due to cough",
+    "lifestyle_notes": [
+      "High salt diet"
+    ],
+    "family_history": [
+      "Father had hypertension"
+    ]
+  }
+]

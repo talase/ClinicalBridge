@@ -1,0 +1,9 @@
+[
+  {
+    "scenario_id": "S001",
+    "title": "Missed Blood Pressure Medication",
+    "description": "Patient stopped taking hypertension medication and experienced a blood pressure spike.",
+    "related_alert": "A001",
+    "expected_system_behavior": "System should identify medication non-adherence as a possible cause and recommend urgent clinician review."
+  }
+]

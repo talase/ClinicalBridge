@@ -1,0 +1,21 @@
+[
+  {
+    "patient_id": "P001",
+    "name": "John Smith",
+    "age": 58,
+    "gender": "Male",
+    "diagnoses": [
+      "Hypertension"
+    ],
+    "medications": [
+      "Lisinopril"
+    ],
+    "allergies": [
+      "Penicillin"
+    ],
+    "recent_labs": {
+      "cholesterol": "220 mg/dL",
+      "glucose": "105 mg/dL"
+    }
+  }
+]
