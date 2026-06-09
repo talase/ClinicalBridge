@@ -37,5 +37,45 @@
     "description": "Patient with kidney disease developed low blood pressure and dizziness.",
     "related_alert": "A005",
     "expected_system_behavior": "Flag hypotension risk and recommend clinician assessment."
+  },
+
+  {
+    "scenario_id": "S006",
+    "title": "COPD Oxygen Drop",
+    "description": "COPD patient experienced dangerously low oxygen saturation.",
+    "related_alert": "A006",
+    "expected_system_behavior": "Recommend urgent respiratory assessment."
+  },
+
+  {
+    "scenario_id": "S007",
+    "title": "Incomplete Patient Record",
+    "description": "Patient record is mostly empty while heart rate alert is triggered.",
+    "related_alert": "A007",
+    "expected_system_behavior": "System should clearly flag missing clinical context."
+  },
+
+  {
+    "scenario_id": "S008",
+    "title": "Conflicting Medication Information",
+    "description": "Patient claims medication adherence but readings remain uncontrolled.",
+    "related_alert": "A008",
+    "expected_system_behavior": "Flag possible discrepancy without making accusations."
+  },
+
+  {
+    "scenario_id": "S009",
+    "title": "Sleep Apnea Oxygen Event",
+    "description": "Patient oxygen drops repeatedly during sleep.",
+    "related_alert": "A009",
+    "expected_system_behavior": "Identify possible worsening sleep apnea."
+  },
+
+  {
+    "scenario_id": "S010",
+    "title": "Low Activity Obesity Risk",
+    "description": "Patient activity level remains critically low.",
+    "related_alert": "A010",
+    "expected_system_behavior": "Recommend lifestyle intervention and monitoring."
   }
 ]

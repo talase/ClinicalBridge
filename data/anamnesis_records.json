@@ -1,74 +1,81 @@
 [
   {
     "patient_id": "P001",
-    "symptoms": [
-      "Headache",
-      "Dizziness"
-    ],
+    "symptoms": ["Headache", "Dizziness"],
     "medication_adherence": "Stopped taking medication due to cough",
-    "lifestyle_notes": [
-      "High salt diet"
-    ],
-    "family_history": [
-      "Father had hypertension"
-    ]
+    "lifestyle_notes": ["High salt diet"],
+    "family_history": ["Father had hypertension"]
   },
 
   {
     "patient_id": "P002",
-    "symptoms": [
-      "Fatigue",
-      "Frequent thirst"
-    ],
+    "symptoms": ["Fatigue", "Frequent thirst"],
     "medication_adherence": "Taking medication regularly",
-    "lifestyle_notes": [
-      "Recently consumed sugary foods during holiday"
-    ],
-    "family_history": [
-      "Mother had diabetes"
-    ]
+    "lifestyle_notes": ["Recently consumed sugary foods during holiday"],
+    "family_history": ["Mother had diabetes"]
   },
 
   {
     "patient_id": "P003",
-    "symptoms": [
-      "Ankle swelling",
-      "Shortness of breath"
-    ],
+    "symptoms": ["Ankle swelling", "Shortness of breath"],
     "medication_adherence": "Missed medication twice this week",
-    "lifestyle_notes": [
-      "Low physical activity"
-    ],
-    "family_history": [
-      "Family history of heart disease"
-    ]
+    "lifestyle_notes": ["Low physical activity"],
+    "family_history": ["Family history of heart disease"]
   },
 
   {
     "patient_id": "P004",
-    "symptoms": [
-      "Chest tightness",
-      "Difficulty breathing"
-    ],
+    "symptoms": ["Chest tightness", "Difficulty breathing"],
     "medication_adherence": "Using inhaler frequently",
-    "lifestyle_notes": [
-      "Exposed to dust at home"
-    ],
+    "lifestyle_notes": ["Exposed to dust at home"],
     "family_history": []
   },
 
   {
     "patient_id": "P005",
-    "symptoms": [
-      "Weakness",
-      "Lightheadedness"
-    ],
+    "symptoms": ["Weakness", "Lightheadedness"],
     "medication_adherence": "Taking medication regularly",
-    "lifestyle_notes": [
-      "Low water intake"
-    ],
-    "family_history": [
-      "History of kidney disease"
-    ]
+    "lifestyle_notes": ["Low water intake"],
+    "family_history": ["History of kidney disease"]
+  },
+
+  {
+    "patient_id": "P006",
+    "symptoms": ["Persistent cough", "Shortness of breath"],
+    "medication_adherence": "Sometimes skips inhaler",
+    "lifestyle_notes": ["Former smoker"],
+    "family_history": ["Father had COPD"]
+  },
+
+  {
+    "patient_id": "P007",
+    "symptoms": ["Chest discomfort"],
+    "medication_adherence": "Unknown",
+    "lifestyle_notes": [],
+    "family_history": []
+  },
+
+  {
+    "patient_id": "P008",
+    "symptoms": ["Blurred vision", "Fatigue"],
+    "medication_adherence": "Claims full adherence to medication",
+    "lifestyle_notes": ["Sedentary lifestyle"],
+    "family_history": ["Diabetes"]
+  },
+
+  {
+    "patient_id": "P009",
+    "symptoms": ["Daytime sleepiness", "Snoring"],
+    "medication_adherence": "Uses CPAP inconsistently",
+    "lifestyle_notes": ["Poor sleep habits"],
+    "family_history": []
+  },
+
+  {
+    "patient_id": "P010",
+    "symptoms": ["Joint pain", "Fatigue"],
+    "medication_adherence": "No current medications",
+    "lifestyle_notes": ["Very low physical activity", "Frequent fast food consumption"],
+    "family_history": ["Obesity"]
   }
 ]

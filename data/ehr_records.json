@@ -4,15 +4,9 @@
     "name": "John Smith",
     "age": 58,
     "gender": "Male",
-    "diagnoses": [
-      "Hypertension"
-    ],
-    "medications": [
-      "Lisinopril"
-    ],
-    "allergies": [
-      "Penicillin"
-    ],
+    "diagnoses": ["Hypertension"],
+    "medications": ["Lisinopril"],
+    "allergies": ["Penicillin"],
     "recent_labs": {
       "cholesterol": "220 mg/dL",
       "glucose": "105 mg/dL"
@@ -24,12 +18,8 @@
     "name": "Sarah Johnson",
     "age": 64,
     "gender": "Female",
-    "diagnoses": [
-      "Type 2 Diabetes"
-    ],
-    "medications": [
-      "Metformin"
-    ],
+    "diagnoses": ["Type 2 Diabetes"],
+    "medications": ["Metformin"],
     "allergies": [],
     "recent_labs": {
       "glucose": "250 mg/dL",
@@ -42,12 +32,8 @@
     "name": "Michael Brown",
     "age": 72,
     "gender": "Male",
-    "diagnoses": [
-      "Heart Failure"
-    ],
-    "medications": [
-      "Furosemide"
-    ],
+    "diagnoses": ["Heart Failure"],
+    "medications": ["Furosemide"],
     "allergies": [],
     "recent_labs": {
       "BNP": "600 pg/mL"
@@ -59,15 +45,9 @@
     "name": "Emily Davis",
     "age": 45,
     "gender": "Female",
-    "diagnoses": [
-      "Asthma"
-    ],
-    "medications": [
-      "Albuterol"
-    ],
-    "allergies": [
-      "Dust"
-    ],
+    "diagnoses": ["Asthma"],
+    "medications": ["Albuterol"],
+    "allergies": ["Dust"],
     "recent_labs": {
       "oxygen_saturation": "96%"
     }
@@ -78,15 +58,75 @@
     "name": "Robert Wilson",
     "age": 67,
     "gender": "Male",
-    "diagnoses": [
-      "Chronic Kidney Disease"
-    ],
-    "medications": [
-      "Losartan"
-    ],
+    "diagnoses": ["Chronic Kidney Disease"],
+    "medications": ["Losartan"],
     "allergies": [],
     "recent_labs": {
       "creatinine": "2.1 mg/dL"
+    }
+  },
+
+  {
+    "patient_id": "P006",
+    "name": "Linda Martinez",
+    "age": 70,
+    "gender": "Female",
+    "diagnoses": ["COPD"],
+    "medications": ["Tiotropium"],
+    "allergies": ["Smoke"],
+    "recent_labs": {
+      "oxygen_saturation": "89%"
+    }
+  },
+
+  {
+    "patient_id": "P007",
+    "name": "David Anderson",
+    "age": 61,
+    "gender": "Male",
+    "diagnoses": [],
+    "medications": [],
+    "allergies": [],
+    "recent_labs": {}
+  },
+
+  {
+    "patient_id": "P008",
+    "name": "Jessica Taylor",
+    "age": 53,
+    "gender": "Female",
+    "diagnoses": ["Hypertension", "Type 2 Diabetes"],
+    "medications": ["Amlodipine", "Metformin"],
+    "allergies": [],
+    "recent_labs": {
+      "glucose": "180 mg/dL",
+      "blood_pressure_average": "150/95"
+    }
+  },
+
+  {
+    "patient_id": "P009",
+    "name": "Thomas Moore",
+    "age": 48,
+    "gender": "Male",
+    "diagnoses": ["Sleep Apnea"],
+    "medications": ["CPAP Therapy"],
+    "allergies": [],
+    "recent_labs": {
+      "sleep_quality_score": "Low"
+    }
+  },
+
+  {
+    "patient_id": "P010",
+    "name": "Olivia Harris",
+    "age": 59,
+    "gender": "Female",
+    "diagnoses": ["Obesity"],
+    "medications": [],
+    "allergies": [],
+    "recent_labs": {
+      "BMI": "36"
     }
   }
 ]
