@@ -5,6 +5,7 @@ __pycache__/
 .pytest_cache/
 .mypy_cache/
 .ruff_cache/
+.hypothesis/
 .coverage
 .coverage.*
 htmlcov/
@@ -34,6 +35,8 @@ tokens.*
 *_secret.*
 *_credentials.*
 *_token.*
+.pypirc
+.streamlit/secrets.toml
 
 # Local configuration
 *.local
@@ -46,17 +49,21 @@ local_settings.py
 .codex/
 .agents/
 
-# Editors and operating systems
-.DS_Store
-Thumbs.db
+# Notebooks and editor metadata
+.ipynb_checkpoints/
 .idea/
 .vscode/
 *.swp
 *.swo
 *~
 
+# Operating-system files
+.DS_Store
+Thumbs.db
+
 # Logs and temporary files
 *.log
 *.tmp
 *.temp
 .cache/
+tempCodeRunnerFile.py

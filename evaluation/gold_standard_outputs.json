@@ -1,0 +1,51 @@
+[
+  {
+    "scenario_id": "S001",
+    "expected_summary": "Patient likely experienced hypertensive crisis due to medication non-adherence."
+  },
+
+  {
+    "scenario_id": "S002",
+    "expected_summary": "High glucose likely related to recent dietary changes."
+  },
+
+  {
+    "scenario_id": "S003",
+    "expected_summary": "Rapid weight gain may indicate worsening heart failure."
+  },
+
+  {
+    "scenario_id": "S004",
+    "expected_summary": "Asthma exacerbation likely triggered by dust exposure."
+  },
+
+  {
+    "scenario_id": "S005",
+    "expected_summary": "Low blood pressure may be associated with kidney disease and dehydration."
+  },
+
+  {
+    "scenario_id": "S006",
+    "expected_summary": "COPD patient requires urgent respiratory evaluation."
+  },
+
+  {
+    "scenario_id": "S007",
+    "expected_summary": "System should acknowledge insufficient patient history."
+  },
+
+  {
+    "scenario_id": "S008",
+    "expected_summary": "Possible inconsistency between reported adherence and readings."
+  },
+
+  {
+    "scenario_id": "S009",
+    "expected_summary": "Repeated oxygen drops suggest worsening sleep apnea."
+  },
+
+  {
+    "scenario_id": "S010",
+    "expected_summary": "Low activity levels increase obesity-related health risks."
+  }
+]

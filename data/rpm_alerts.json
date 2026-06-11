@@ -1,0 +1,101 @@
+[
+  {
+    "alert_id": "A001",
+    "patient_id": "P001",
+    "timestamp": "2026-05-10T14:00:00",
+    "device_type": "Blood Pressure Monitor",
+    "alert_type": "High Blood Pressure",
+    "reading": "190/120",
+    "urgency": "Critical"
+  },
+
+  {
+    "alert_id": "A002",
+    "patient_id": "P002",
+    "timestamp": "2026-05-11T09:30:00",
+    "device_type": "Glucose Monitor",
+    "alert_type": "High Glucose",
+    "reading": "320 mg/dL",
+    "urgency": "Urgent"
+  },
+
+  {
+    "alert_id": "A003",
+    "patient_id": "P003",
+    "timestamp": "2026-05-12T16:20:00",
+    "device_type": "Weight Monitor",
+    "alert_type": "Rapid Weight Gain",
+    "reading": "+4kg in 2 weeks",
+    "urgency": "Urgent"
+  },
+
+  {
+    "alert_id": "A004",
+    "patient_id": "P004",
+    "timestamp": "2026-05-13T11:10:00",
+    "device_type": "Oxygen Monitor",
+    "alert_type": "Low Oxygen Saturation",
+    "reading": "88%",
+    "urgency": "Critical"
+  },
+
+  {
+    "alert_id": "A005",
+    "patient_id": "P005",
+    "timestamp": "2026-05-14T08:45:00",
+    "device_type": "Blood Pressure Monitor",
+    "alert_type": "Low Blood Pressure",
+    "reading": "85/60",
+    "urgency": "Routine"
+  },
+
+  {
+    "alert_id": "A006",
+    "patient_id": "P006",
+    "timestamp": "2026-05-15T10:00:00",
+    "device_type": "Oxygen Monitor",
+    "alert_type": "Low Oxygen Level",
+    "reading": "84%",
+    "urgency": "Critical"
+  },
+
+  {
+    "alert_id": "A007",
+    "patient_id": "P007",
+    "timestamp": "2026-05-15T12:00:00",
+    "device_type": "Heart Rate Monitor",
+    "alert_type": "High Heart Rate",
+    "reading": "130 bpm",
+    "urgency": "Urgent"
+  },
+
+  {
+    "alert_id": "A008",
+    "patient_id": "P008",
+    "timestamp": "2026-05-16T08:20:00",
+    "device_type": "Blood Pressure Monitor",
+    "alert_type": "Elevated Blood Pressure",
+    "reading": "170/100",
+    "urgency": "Urgent"
+  },
+
+  {
+    "alert_id": "A009",
+    "patient_id": "P009",
+    "timestamp": "2026-05-16T23:10:00",
+    "device_type": "Sleep Monitor",
+    "alert_type": "Low Oxygen During Sleep",
+    "reading": "82%",
+    "urgency": "Urgent"
+  },
+
+  {
+    "alert_id": "A010",
+    "patient_id": "P010",
+    "timestamp": "2026-05-17T15:40:00",
+    "device_type": "Activity Tracker",
+    "alert_type": "Low Activity Level",
+    "reading": "400 steps/day",
+    "urgency": "Informational"
+  }
+]

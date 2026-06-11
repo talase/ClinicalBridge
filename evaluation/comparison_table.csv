@@ -1,0 +1,11 @@
+scenario_id,expected_output,actual_output,match,notes
+S001,Medication non-adherence identified,,,
+S002,Diet-related glucose spike identified,,,
+S003,Heart failure worsening identified,,,
+S004,Asthma trigger identified,,,
+S005,Hypotension risk identified,,,
+S006,COPD respiratory risk identified,,,
+S007,Missing data acknowledged,,,
+S008,Conflict handled safely,,,
+S009,Sleep apnea issue identified,,,
+S010,Lifestyle risk identified,,,

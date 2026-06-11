@@ -1,14 +1,33 @@
-# Clinical Prompt Engineering: Four-Agent Decision-Support Pipeline
+# ClinicalBridge
 
 ## Overview
 
-This portfolio project demonstrates an iterative prompt-engineering workflow for a
-four-agent clinical decision-support pipeline. Each agent has a focused responsibility,
-a JSON output contract, Pydantic validation, few-shot examples, safety guardrails, and
-optional OpenAI-powered smoke tests.
+ClinicalBridge is a proof-of-concept multi-agent clinical decision-support system
+developed for the COP-3442 Prompt Engineering Capstone Project. It explores how
+fragmented healthcare information can be transformed into structured clinical context
+for professional review.
 
-The project is an educational prototype. It is not a medical device, does not replace a
+The repository combines:
+
+- Simulated Electronic Health Record (EHR) data
+- Remote Patient Monitoring (RPM) alerts
+- Patient-reported anamnesis data
+- Prompt-engineered clinical agents
+- Evaluation metrics and hallucination checks
+
+This is an educational prototype. It is not a medical device, does not replace a
 licensed clinician, and must not be used to diagnose or treat patients.
+
+## Project Goals
+
+ClinicalBridge demonstrates:
+
+- Prompt engineering and documented iteration
+- Multi-agent orchestration
+- Retrieval-augmented generation concepts
+- Structured clinical data synthesis
+- Hallucination and evidence-consistency evaluation
+- Healthcare safety guardrails
 
 ## Four-Agent Architecture
 
@@ -57,15 +76,24 @@ information, and uses hedged rather than definitive diagnostic language.
 - LangChain
 - OpenAI API
 - Pydantic
+- JSON
+- Pandas and notebook-based dataset analysis
+- Retrieval and vector-database concepts
 
 ## Project Structure
 
 ```text
-.
+ClinicalBridge/
 |-- Agent1 triage.py
 |-- Agent2 ehr.py
 |-- Agent3 anamnesis.py
 |-- Agent4 synthesis.py
+|-- data/
+|-- evaluation/
+|-- notebooks/
+|-- prompts/
+|-- reports/
+|-- src/
 |-- prompt_test_cases.py
 |-- run_prompt_tests.py
 |-- prompt_iteration_log.md
@@ -76,13 +104,28 @@ information, and uses hedged rather than definitive diagnostic language.
 `-- .gitignore
 ```
 
+## Dataset And Evaluation
+
+The repository includes simulated:
+
+- EHR patient records
+- RPM device alerts
+- Anamnesis records
+- Clinical scenarios
+- Gold-standard outputs
+- Evaluation metrics
+- Hallucination comparison tables
+
+See [`reports/dataset_methodology.md`](reports/dataset_methodology.md) and
+[`reports/evaluation_report.md`](reports/evaluation_report.md) for details.
+
 ## Installation
 
 Python 3.11 or newer is recommended.
 
 ```bash
-git clone https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME.git
-cd YOUR_REPOSITORY_NAME
+git clone https://github.com/talase/ClinicalBridge.git
+cd ClinicalBridge
 
 python3 -m venv .venv
 source .venv/bin/activate
@@ -90,7 +133,7 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-On Windows PowerShell, activate the environment with:
+On Windows PowerShell:
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
@@ -98,8 +141,7 @@ On Windows PowerShell, activate the environment with:
 
 ## Environment Variable Setup
 
-Create an API key in the OpenAI developer platform, then expose it only through the
-`OPENAI_API_KEY` environment variable. Never commit the key.
+Create an OpenAI API key and expose it only through the environment. Never commit it.
 
 macOS or Linux:
 
@@ -113,7 +155,7 @@ Windows PowerShell:
 $env:OPENAI_API_KEY="your-api-key"
 ```
 
-The code reads the credential with:
+The Python code reads the credential with:
 
 ```python
 os.getenv("OPENAI_API_KEY")
@@ -135,7 +177,7 @@ python "Agent4 synthesis.py"
 The local schema and validator checks run without an API key. The live LLM section is
 skipped when `OPENAI_API_KEY` is absent.
 
-For programmatic use, load an agent and call its existing run function:
+For programmatic use:
 
 ```python
 import importlib.util
@@ -184,7 +226,7 @@ input, output, and PASS/FAIL result.
 - Mandatory human escalation for emergent triage outputs.
 - No fabrication of unknown EHR records.
 - Immediate escalation when anamnesis discovers a new red flag.
-- Evidence-only synthesis using the three upstream outputs.
+- Evidence-only synthesis using upstream agent outputs.
 - Exact physician-review labeling for synthesis output.
 - Hedged diagnostic wording and rejection of definitive diagnosis phrases.
 - No hard-coded API credentials.
@@ -199,7 +241,7 @@ Development followed a documented regression cycle:
 1. Start with a basic role and task prompt.
 2. Add JSON-only output requirements.
 3. Add safety rules based on observed failures.
-4. enforce critical invariants with Pydantic validators.
+4. Enforce critical invariants with Pydantic validators.
 5. Retest representative cases with optional LLM smoke tests and
    evidence-consistency checks.
 
@@ -209,7 +251,7 @@ are in [`prompt_test_cases.py`](prompt_test_cases.py).
 
 ## Results Summary
 
-The current test layer covers five previously observed or anticipated regressions:
+The current prompt test layer covers five regressions:
 
 - Chest pain is escalated to P1 rather than under-classified as P2.
 - Unknown EHR patient IDs return `not_found` instead of invented records.
@@ -220,10 +262,35 @@ The current test layer covers five previously observed or anticipated regression
 All Python files compile successfully, local schema checks pass, and the live regression
 suite is ready to run when an API key and API quota are available.
 
+## Team Responsibilities
+
+### Student 1: Dataset and Evaluation Lead
+
+- Simulated datasets and clinical scenarios
+- Evaluation framework and hallucination analysis
+- Dataset and evaluation documentation
+
+### Student 2: Prompt Engineering Lead
+
+- Prompt design and iteration
+- Failure analysis
+- Safety guardrails and regression cases
+
+### Student 3: RAG and Retrieval Lead
+
+- Vector database and retrieval pipeline
+- Agent implementation support
+
+### Student 4: Multi-Agent Integration Lead
+
+- Orchestration and workflow management
+- Final prototype integration
+
 ## Responsible Use
 
-This repository contains synthetic examples and prompt-engineering demonstrations.
-Do not enter protected health information, real patient records, or production
-credentials. Any clinical deployment would require expert validation, security review,
-privacy controls, monitoring, and applicable regulatory approval.
+This repository uses fully simulated patient data and is intended strictly for academic
+and educational purposes. Do not enter protected health information, real patient
+records, or production credentials. Any clinical deployment would require expert
+validation, security review, privacy controls, monitoring, and applicable regulatory
+approval.
 
