@@ -67,3 +67,6 @@ Thumbs.db
 *.temp
 .cache/
 tempCodeRunnerFile.py
+
+# generated vector store
+vector_store/
