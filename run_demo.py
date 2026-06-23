@@ -1,18 +1,17 @@
-
-from orchestrator import ClinicalOrchestrator
 from langchain_openai import ChatOpenAI
+from orchestrator import ClinicalOrchestrator
 
-llm = ChatOpenAI(model="gpt-4o", temperature=0)
+def main():
+    llm = ChatOpenAI(model="gpt-4o", temperature=0)
 
-orch = ClinicalOrchestrator(llm)
+    orch = ClinicalOrchestrator(llm)
 
-cases = [
-    "severe chest pain radiating to left arm",
-    "headache fever stiff neck",
-    "burning urination and mild pain"
-]
+    test_input = "severe chest pain radiating to left arm and shortness of breath"
 
-for c in cases:
-    print("\nINPUT:", c)
-    result = orch.run_all(c)
+    result = orch.run_all(test_input)
+
+    print("\n===== FINAL OUTPUT =====\n")
     print(result)
+
+if __name__ == "__main__":
+    main()
