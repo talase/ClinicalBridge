@@ -1,5 +1,5 @@
 # search functions used by the agents to pull patient context from the store
-
+"""
 from embedding import COLLECTION_NAME, embed_texts, get_client
 
 TOP_K = 5
@@ -58,3 +58,26 @@ if __name__ == "__main__":
     print("Alert", alert["alert_id"], "for patient", alert["patient_id"])
     for h in retrieve_patient_context(alert["patient_id"], alert_to_query(alert), top_k=4):
         print(" ", h["score"], h["source"])
+"""
+
+
+def retrieve(query, top_k=5, patient_id=None, source=None):
+
+    try:
+        collection = get_client().get_collection(COLLECTION_NAME)
+        results = collection.query(
+            query_texts=[query],
+            n_results=top_k
+        )
+
+        return results.get("documents", [[]])[0]
+
+    except Exception:
+        # HARD FALLBACK (prevents crash)
+        return [
+            {
+                "id": "fallback",
+                "content": "No retrieval database available. Using safe fallback context.",
+                "score": 0.0
+            }
+        ]
