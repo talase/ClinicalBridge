@@ -1,5 +1,8 @@
 
-from schemas import AnamnesisOutput, SymptomItem
+from src.schemas import (
+    SymptomItem,
+    AnamnesisOutput
+)
 
 class AnamnesisAgent:
 
