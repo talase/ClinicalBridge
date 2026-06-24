@@ -10,6 +10,7 @@ class ClinicalOrchestrator:
         self.llm = llm
         self.ehr = EHRAgent()
         self.anam = AnamnesisAgent()
+        self.rpm = RPMAgent()
 
     # -----------------------------
     # SAFE WRAPPER FUNCTION
@@ -54,6 +55,17 @@ class ClinicalOrchestrator:
             }
         )
 
+
+         rpm = self.safe_call(
+            lambda: self.rpm.run(user_input),
+            lambda err: {
+               "alerts_found": 0,
+               "alerts": [],
+               "error": str(err)
+            }
+        )
+        
+
         # 3. ANAMNESIS (safe extraction fallback)
         anam = self.safe_call(
             lambda: self.anam.run(user_input),
@@ -81,6 +93,7 @@ class ClinicalOrchestrator:
         return {
     "triage": triage.model_dump() if hasattr(triage, "model_dump") else triage,
     "ehr": ehr.model_dump() if hasattr(ehr, "model_dump") else ehr,
+    "rpm": rpm,
     "anamnesis": anam.model_dump() if hasattr(anam, "model_dump") else anam,
     "synthesis": synthesis.model_dump()
         if hasattr(synthesis, "model_dump")
