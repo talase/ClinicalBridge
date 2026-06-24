@@ -56,7 +56,7 @@ class ClinicalOrchestrator:
         )
 
 
-         rpm = self.safe_call(
+        rpm = self.safe_call(
             lambda: self.rpm.run(user_input),
             lambda err: {
                "alerts_found": 0,
