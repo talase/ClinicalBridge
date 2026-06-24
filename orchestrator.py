@@ -78,7 +78,7 @@ class ClinicalOrchestrator:
     }
 )
 
-return {
+    return {
     "triage": triage.model_dump() if hasattr(triage, "model_dump") else triage,
     "ehr": ehr.model_dump() if hasattr(ehr, "model_dump") else ehr,
     "anamnesis": anam.model_dump() if hasattr(anam, "model_dump") else anam,
