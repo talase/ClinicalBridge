@@ -1,6 +1,7 @@
 from src.triage_agent import run_triage
 from src.ehr_agent import EHRAgent
 from src.anamnesis_agent import AnamnesisAgent
+from src.synthesis_agent import run_synthesis
 
 
 class ClinicalOrchestrator:
@@ -64,8 +65,24 @@ class ClinicalOrchestrator:
             }
         )
 
-        return {
-            "triage": triage.model_dump() if hasattr(triage, "model_dump") else triage,
-            "ehr": ehr.model_dump() if hasattr(ehr, "model_dump") else ehr,
-            "anamnesis": anam.model_dump() if hasattr(anam, "model_dump") else anam
-        }
+
+        synthesis = self.safe_call(
+    lambda: run_synthesis(
+        self.llm,
+        triage.model_dump() if hasattr(triage, "model_dump") else triage,
+        ehr.model_dump() if hasattr(ehr, "model_dump") else ehr,
+        anam.model_dump() if hasattr(anam, "model_dump") else anam
+    ),
+    lambda err: {
+        "error": f"Synthesis failed: {err}"
+    }
+)
+
+return {
+    "triage": triage.model_dump() if hasattr(triage, "model_dump") else triage,
+    "ehr": ehr.model_dump() if hasattr(ehr, "model_dump") else ehr,
+    "anamnesis": anam.model_dump() if hasattr(anam, "model_dump") else anam,
+    "synthesis": synthesis.model_dump()
+        if hasattr(synthesis, "model_dump")
+        else synthesis
+}
