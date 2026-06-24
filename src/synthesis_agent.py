@@ -34,7 +34,7 @@ class SynthesisOutput(BaseModel):
     overall_risk: Literal["LOW", "MODERATE", "HIGH", "CRITICAL"]
     physician_alert: bool
     alert_reason: Optional[str]
-    data_sources_used: List[Literal["triage", "ehr", "anamnesis"]] = Field(
+    data_sources_used: List[Literal["triage", "ehr", "rpm", "anamnesis"]] = Field(
         description="Which upstream agents contributed data to this synthesis"
     )
     missing_sources: List[str] = Field(
@@ -568,6 +568,7 @@ def build_synthesis_chain(llm):
 def run_synthesis(llm,
                   triage_output: dict,
                   ehr_output: dict,
+                  rpm_output: dict,
                   anamnesis_output: dict) -> SynthesisOutput:
     """
     Full synthesis pipeline with post-output safety validation.
@@ -579,6 +580,7 @@ def run_synthesis(llm,
     request = json.dumps({
         "triage_output":    triage_output,
         "ehr_output":       ehr_output,
+        "rpm_output":       rpm_output,
         "anamnesis_output": anamnesis_output
     })
     raw = chain.invoke({"synthesis_request": request})
