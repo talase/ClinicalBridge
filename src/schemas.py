@@ -1,4 +1,4 @@
-
+from src.schemas import TriageOutput
 from pydantic import BaseModel, Field
 from typing import List, Optional, Literal, Dict, Any
 
