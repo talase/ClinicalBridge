@@ -83,7 +83,7 @@ class ClinicalOrchestrator:
         self.llm,
         triage.model_dump() if hasattr(triage, "model_dump") else triage,
         ehr.model_dump() if hasattr(ehr, "model_dump") else ehr,
-        rpm.model_dump() is hasattr(rpm, "model_dump") else rpm,
+        rpm.model_dump() if hasattr(rpm, "model_dump") else rpm,
         anam.model_dump() if hasattr(anam, "model_dump") else anam
     ),
     lambda err: {
