@@ -1,7 +1,7 @@
 
 from langchain_core.prompts import ChatPromptTemplate, FewShotChatMessagePromptTemplate
 from langchain_core.output_parsers import JsonOutputParser
-from schemas import TriageOutput
+from src.schemas import TriageOutput
 import json
 
 TRIAGE_SYSTEM = "You are a medical triage AI. Return JSON only."
