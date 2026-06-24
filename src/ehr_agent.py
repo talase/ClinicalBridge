@@ -1,5 +1,9 @@
 
-from schemas import EHRQuery, RetrievedDocument, EHRResponse
+from src.schemas import (
+    EHRQuery,
+    RetrievedDocument,
+    EHRResponse
+)
 from typing import List
 
 class FakeRetrieval:
