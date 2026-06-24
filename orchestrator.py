@@ -2,7 +2,7 @@ from src.triage_agent import run_triage
 from src.ehr_agent import EHRAgent
 from src.anamnesis_agent import AnamnesisAgent
 from src.synthesis_agent import run_synthesis
-
+from src.rpm_agent import RPMAgent
 
 class ClinicalOrchestrator:
 
