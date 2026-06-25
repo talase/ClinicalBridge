@@ -525,7 +525,7 @@ example_prompt = ChatPromptTemplate.from_messages([
     ("human", "{input}"),
     ("ai",    "{output}"),
 ])
-
+"""
 few_shot_prompt = FewShotChatMessagePromptTemplate(
     example_prompt=example_prompt,
     examples=FEW_SHOT_EXAMPLES,
@@ -539,7 +539,7 @@ SYNTHESIS_PROMPT = ChatPromptTemplate.from_messages([
 
 parser = JsonOutputParser(pydantic_object=SynthesisOutput)
 
-
+"""
 # ============================================================
 # 5. CHAIN ASSEMBLY
 # ============================================================
