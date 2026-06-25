@@ -12,7 +12,7 @@ def main():
     orch = ClinicalOrchestrator(llm)
 
     #test_input = "severe chest pain radiating to left arm and shortness of breath"
-    test_input = "test_input = "mild headache for two days""
+    test_input = "mild headache for two days"
 
     result = orch.run_all(test_input)
 
