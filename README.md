@@ -220,31 +220,7 @@ and is automatically opened in the user's default web browser.
 This interface was added to improve interpretability and demonstrate how multi-agent outputs can be consolidated into a single clinician-facing view.
 
 ---
-Installation
-Step 1
 
-Clone or extract the project.
-
-Step 2
-
-Install dependencies.
-
-```bash
-pip install -r requirements.txt
-```
-
-Step 3
-
-Set OpenAI API Key.
-
-Windows PowerShell:
-```bash
-$env:OPENAI_API_KEY="YOUR_API_KEY"
-```
-Linux/macOS:
-```bash
-export OPENAI_API_KEY="YOUR_API_KEY"
-```
 ## End-to-End Prototype Execution
 
 The integrated ClinicalBridge workflow can be executed through:
