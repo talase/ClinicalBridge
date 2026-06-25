@@ -1,51 +1,72 @@
 [
   {
     "scenario_id": "S001",
+    "input": "I stopped taking my blood pressure medication for several days and now I have a severe headache and blurred vision.",
+    "expected_priority": "P2",
+    "expected_risk": "HIGH",
     "expected_summary": "Patient likely experienced hypertensive crisis due to medication non-adherence."
   },
-
   {
     "scenario_id": "S002",
+    "input": "My blood sugar has been very high after eating lots of sweets over the last few days.",
+    "expected_priority": "P3",
+    "expected_risk": "MODERATE",
     "expected_summary": "High glucose likely related to recent dietary changes."
   },
-
   {
     "scenario_id": "S003",
+    "input": "I have heart failure and I've gained five kilograms this week. My legs are swollen and I'm getting more short of breath.",
+    "expected_priority": "P2",
+    "expected_risk": "HIGH",
     "expected_summary": "Rapid weight gain may indicate worsening heart failure."
   },
-
   {
     "scenario_id": "S004",
+    "input": "After cleaning a dusty room I started wheezing and my asthma inhaler is not helping much.",
+    "expected_priority": "P2",
+    "expected_risk": "HIGH",
     "expected_summary": "Asthma exacerbation likely triggered by dust exposure."
   },
-
   {
     "scenario_id": "S005",
+    "input": "I have kidney disease and today I feel dizzy when standing up. My blood pressure has been very low.",
+    "expected_priority": "P3",
+    "expected_risk": "MODERATE",
     "expected_summary": "Low blood pressure may be associated with kidney disease and dehydration."
   },
-
   {
     "scenario_id": "S006",
+    "input": "I have COPD and today my breathing is much worse than usual with persistent shortness of breath.",
+    "expected_priority": "P2",
+    "expected_risk": "HIGH",
     "expected_summary": "COPD patient requires urgent respiratory evaluation."
   },
-
   {
     "scenario_id": "S007",
+    "input": "I don't really know my medical history and I only feel unwell.",
+    "expected_priority": "P4",
+    "expected_risk": "LOW",
     "expected_summary": "System should acknowledge insufficient patient history."
   },
-
   {
     "scenario_id": "S008",
+    "input": "I always take my medication, but my monitoring device keeps showing abnormal readings.",
+    "expected_priority": "P3",
+    "expected_risk": "MODERATE",
     "expected_summary": "Possible inconsistency between reported adherence and readings."
   },
-
   {
     "scenario_id": "S009",
+    "input": "My overnight oxygen monitor has shown repeated drops in oxygen levels while sleeping and I wake up feeling exhausted.",
+    "expected_priority": "P2",
+    "expected_risk": "HIGH",
     "expected_summary": "Repeated oxygen drops suggest worsening sleep apnea."
   },
-
   {
     "scenario_id": "S010",
+    "input": "I rarely exercise, spend most of the day sitting, and I've gained a lot of weight over the last year.",
+    "expected_priority": "P4",
+    "expected_risk": "LOW",
     "expected_summary": "Low activity levels increase obesity-related health risks."
   }
 ]
