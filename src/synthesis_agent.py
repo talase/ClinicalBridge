@@ -82,7 +82,7 @@ class SynthesisOutput(BaseModel):
         if ranks != list(range(1, len(ranks) + 1)):
             raise ValueError("Differential ranks must be sequential starting from 1")
         # Narrative must not contain definitive diagnosis language
-        forbidden = ["the patient has", "diagnosis is", "patient is diagnosed", "confirmed diagnosis"]
+       forbidden = ["the patient has", "diagnosis is", "patient is diagnosed", "confirmed diagnosis"]
        text_to_check = self.clinical_narrative.lower()
 
           for d in self.differentials:
