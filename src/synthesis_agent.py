@@ -83,12 +83,15 @@ class SynthesisOutput(BaseModel):
             raise ValueError("Differential ranks must be sequential starting from 1")
         # Narrative must not contain definitive diagnosis language
         forbidden = ["the patient has", "diagnosis is", "patient is diagnosed", "confirmed diagnosis"]
-        narrative_lower = self.clinical_narrative.lower()
-        for phrase in forbidden:
-            if phrase in narrative_lower:
-                raise ValueError(
-                    f"Safety violation: clinical_narrative contains forbidden phrase '{phrase}'. "
-                    "Use hedged language: 'consistent with', 'suggests', 'cannot exclude'."
+       text_to_check = self.clinical_narrative.lower()
+
+          for d in self.differentials:
+              text_to_check += " " + d.diagnosis.lower()
+
+          for phrase in forbidden:
+              if phrase in text_to_check:
+                  raise ValueError(
+                      f"Safety violation: forbidden phrase '{phrase}' detected."
                 )
         return self
 
