@@ -567,7 +567,7 @@ def build_synthesis_chain(llm):
     """
     return SYNTHESIS_PROMPT | llm | parser
 
-
+"""
 def run_synthesis(llm,
                   triage_output: dict,
                   ehr_output: dict,
@@ -588,7 +588,30 @@ def run_synthesis(llm,
     })
     raw = chain.invoke({"synthesis_request": request})
     return SynthesisOutput(**raw)
+"""
 
+def run_synthesis(llm,
+                  triage_output: dict,
+                  ehr_output: dict,
+                  rpm_output: dict,
+                  anamnesis_output: dict) -> SynthesisOutput:
+
+    chain = build_synthesis_chain(llm)
+
+    request = json.dumps({
+        "triage_output": triage_output,
+        "ehr_output": ehr_output,
+        "rpm_output": rpm_output,
+        "anamnesis_output": anamnesis_output
+    })
+
+    raw = chain.invoke({"synthesis_request": request})
+
+    print("\n===== RAW SYNTHESIS RESPONSE =====")
+    print(json.dumps(raw, indent=2))
+    print("==================================\n")
+
+    return SynthesisOutput(**raw)
 
 # ============================================================
 # SMOKE TEST
