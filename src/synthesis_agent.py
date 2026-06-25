@@ -536,10 +536,13 @@ SYNTHESIS_PROMPT = ChatPromptTemplate.from_messages([
     few_shot_prompt,
     ("human",  "{synthesis_request}"),
 ])
-
+"""
+SYNTHESIS_PROMPT = ChatPromptTemplate.from_messages([
+    ("system", SYNTHESIS_SYSTEM_PROMPT),
+    ("human", "{synthesis_request}"),
+])
 parser = JsonOutputParser(pydantic_object=SynthesisOutput)
 
-"""
 # ============================================================
 # 5. CHAIN ASSEMBLY
 # ============================================================
