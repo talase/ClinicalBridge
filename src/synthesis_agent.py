@@ -538,16 +538,26 @@ SYNTHESIS_PROMPT = ChatPromptTemplate.from_messages([
 ])
 """
 SYNTHESIS_PROMPT = ChatPromptTemplate.from_messages([
-    ("system", SYNTHESIS_SYSTEM_PROMPT),
+    (
+        "system",
+        SYNTHESIS_SYSTEM_PROMPT +
+        "\n\nReturn ONLY valid JSON matching this schema:\n{format_instructions}"
+    ),
     ("human", "{synthesis_request}"),
 ])
-parser = JsonOutputParser(pydantic_object=SynthesisOutput)
 
 # ============================================================
 # 5. CHAIN ASSEMBLY
 # ============================================================
 
 def build_synthesis_chain(llm):
+    return (
+        SYNTHESIS_PROMPT.partial(
+            format_instructions=parser.get_format_instructions()
+        )
+        | llm
+        | parser
+    )
     """
     Returns a runnable synthesis chain.
 
@@ -565,7 +575,7 @@ def build_synthesis_chain(llm):
     Note: temperature=0 strongly recommended — clinical synthesis
     must be deterministic and evidence-grounded.
     """
-    return SYNTHESIS_PROMPT | llm | parser
+   # return SYNTHESIS_PROMPT | llm | parser
 
 """
 def run_synthesis(llm,
