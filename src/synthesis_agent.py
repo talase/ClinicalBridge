@@ -573,12 +573,12 @@ def run_synthesis(llm,
                   ehr_output: dict,
                   rpm_output: dict,
                   anamnesis_output: dict) -> SynthesisOutput:
-    """
+    ###
     Full synthesis pipeline with post-output safety validation.
 
     Pass the raw dicts from agent1, agent2, agent3.
     Raises ValueError if any safety constraint is violated.
-    """
+    ###
     chain = build_synthesis_chain(llm)
     request = json.dumps({
         "triage_output":    triage_output,
