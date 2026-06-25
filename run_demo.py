@@ -305,10 +305,29 @@ def main():
     orch = ClinicalOrchestrator(llm)
 
     # Example 1
-    # test_input = "severe chest pain radiating to left arm and shortness of breath"
+    test_input = "severe chest pain radiating to left arm and shortness of breath"
 
     # Example 2
-    test_input = "mild headache for two days"
+    #test_input = "mild headache for two days"
+
+    #Example 3
+    #test_input = "Severe chest pain radiating to the left arm, shortness of breath, sweating, and nausea."
+    
+    #Example 4
+    #test_input = "Sudden facial drooping, slurred speech, and weakness in the right arm that started 20 minutes ago."
+    
+    #Example 5
+    #test_input = "High fever of 39.2°C, productive cough, chest discomfort, and fatigue for three days."
+    
+    #Example 6
+    #test_input = "Burning sensation while urinating and increased urinary frequency for two days."
+
+    #Example 7
+    #test_input = "Mild headache for two days with no fever, vision changes, or other symptoms."
+
+    #Example 8
+    #test_input = "I have been thinking about harming myself and I do not feel safe being alone."
+    
 
     result = orch.run_all(test_input)
 
