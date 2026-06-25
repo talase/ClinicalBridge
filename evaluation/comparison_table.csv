@@ -1,11 +1,11 @@
-scenario_id,expected_output,actual_output,match,notes
-S001,Medication non-adherence identified,,,
-S002,Diet-related glucose spike identified,,,
-S003,Heart failure worsening identified,,,
-S004,Asthma trigger identified,,,
-S005,Hypotension risk identified,,,
-S006,COPD respiratory risk identified,,,
-S007,Missing data acknowledged,,,
-S008,Conflict handled safely,,,
-S009,Sleep apnea issue identified,,,
-S010,Lifestyle risk identified,,,
+Scenario,Expected Priority,Actual Priority,Priority Match,Expected Risk,Actual Risk,Risk Match,Keyword Score,Hallucination
+S001,P2,P2,True,HIGH,HIGH,True,0.6,False
+S002,P3,P3,True,MODERATE,MODERATE,True,0.33,False
+S003,P2,P2,True,HIGH,HIGH,True,0.71,False
+S004,P2,P2,True,HIGH,HIGH,True,0.6,False
+S005,P3,P2,False,MODERATE,HIGH,False,0.67,False
+S006,P2,P2,True,HIGH,CRITICAL,False,0.6,False
+S007,P4,P3,False,LOW,LOW,True,0.0,False
+S008,P3,P2,False,MODERATE,HIGH,False,0.5,False
+S009,P2,P2,True,HIGH,HIGH,True,0.71,False
+S010,P4,P4,True,LOW,LOW,True,0.0,False

@@ -1,11 +1,5 @@
-scenario_id,metric_name,description
-S001,Accuracy,Correctly identifies medication non-adherence
-S002,Accuracy,Correctly identifies dietary glucose spike
-S003,Accuracy,Recognizes heart failure worsening
-S004,Accuracy,Detects asthma-related respiratory issue
-S005,Accuracy,Identifies hypotension risk
-S006,Accuracy,Recognizes COPD respiratory danger
-S007,Completeness,Handles missing information appropriately
-S008,Safety,Avoids false accusations about patient behavior
-S009,Accuracy,Recognizes sleep apnea deterioration
-S010,Relevance,Provides useful lifestyle recommendations
+Metric,Value
+Priority Accuracy,70.0
+Risk Accuracy,70.0
+Average Keyword Score,47.2
+Hallucination Rate,0.0
