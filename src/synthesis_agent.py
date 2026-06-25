@@ -82,13 +82,13 @@ class SynthesisOutput(BaseModel):
         if ranks != list(range(1, len(ranks) + 1)):
             raise ValueError("Differential ranks must be sequential starting from 1")
         # Narrative must not contain definitive diagnosis language
-    forbidden = ["the patient has", "diagnosis is", "patient is diagnosed", "confirmed diagnosis"]
-       text_to_check = self.clinical_narrative.lower()
+        forbidden = ["the patient has", "diagnosis is", "patient is diagnosed", "confirmed diagnosis"]
+        text_to_check = self.clinical_narrative.lower()
 
-          for d in self.differentials:
+         for d in self.differentials:
               text_to_check += " " + d.diagnosis.lower()
 
-          for phrase in forbidden:
+         for phrase in forbidden:
               if phrase in text_to_check:
                   raise ValueError(
                       f"Safety violation: forbidden phrase '{phrase}' detected."
