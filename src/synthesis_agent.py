@@ -57,44 +57,57 @@ class SynthesisOutput(BaseModel):
         ge=0.0, le=1.0,
         description="Confidence in synthesis based on completeness of upstream data"
     )
-
-    @model_validator(mode="after")
+        @model_validator(mode="after")
     def safety_checks(self):
-        # Header must be exact — hard gate preventing patient-facing delivery
+
         required_header = "DRAFT CLINICAL SUMMARY — FOR PHYSICIAN REVIEW ONLY"
+
         if self.summary_header != required_header:
             raise ValueError(
                 f"Safety violation: summary_header must be exactly '{required_header}'"
             )
-        # HIGH or CRITICAL risk must trigger physician alert
+
         if self.overall_risk in ("HIGH", "CRITICAL") and not self.physician_alert:
             raise ValueError(
                 f"Safety violation: overall_risk='{self.overall_risk}' requires physician_alert=True"
             )
-        # physician_alert=True must have an alert_reason
+
         if self.physician_alert and not self.alert_reason:
-            raise ValueError("alert_reason required when physician_alert=True")
-        # Must have at least 3 differentials
+            raise ValueError(
+                "alert_reason required when physician_alert=True"
+            )
+
         if len(self.differentials) < 3:
-            raise ValueError("At least 3 differential diagnoses required")
-        # Differentials must be ranked 1..N without gaps
+            raise ValueError(
+                "At least 3 differential diagnoses required"
+            )
+
         ranks = sorted([d.rank for d in self.differentials])
+
         if ranks != list(range(1, len(ranks) + 1)):
-            raise ValueError("Differential ranks must be sequential starting from 1")
-        # Narrative must not contain definitive diagnosis language
-        forbidden = ["the patient has", "diagnosis is", "patient is diagnosed", "confirmed diagnosis"]
+            raise ValueError(
+                "Differential ranks must be sequential starting from 1"
+            )
+
+        forbidden = [
+            "the patient has",
+            "diagnosis is",
+            "patient is diagnosed",
+            "confirmed diagnosis"
+        ]
+
         text_to_check = self.clinical_narrative.lower()
 
-         for d in self.differentials:
-              text_to_check += " " + d.diagnosis.lower()
+        for d in self.differentials:
+            text_to_check += " " + d.diagnosis.lower()
 
-         for phrase in forbidden:
-              if phrase in text_to_check:
-                  raise ValueError(
-                      f"Safety violation: forbidden phrase '{phrase}' detected."
+        for phrase in forbidden:
+            if phrase in text_to_check:
+                raise ValueError(
+                    f"Safety violation: forbidden phrase '{phrase}' detected."
                 )
-        return self
 
+        return self
 
 SYNTHESIS_JSON_SCHEMA = {
     "$schema": "http://json-schema.org/draft-07/schema#",
