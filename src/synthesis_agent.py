@@ -57,7 +57,7 @@ class SynthesisOutput(BaseModel):
         ge=0.0, le=1.0,
         description="Confidence in synthesis based on completeness of upstream data"
     )
-        @model_validator(mode="after")
+    @model_validator(mode="after")
     def safety_checks(self):
 
         required_header = "DRAFT CLINICAL SUMMARY — FOR PHYSICIAN REVIEW ONLY"
