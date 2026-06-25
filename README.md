@@ -195,6 +195,144 @@ result = triage_agent.run_triage(
 print(result.model_dump_json(indent=2))
 ```
 
+
+## ClinicalBridge Dashboard
+
+The integrated prototype includes an HTML-based dashboard that automatically opens after execution.
+
+The dashboard provides a structured physician-facing view of:
+
+* Triage assessment
+* Patient EHR information
+* RPM alerts
+* Anamnesis findings
+* Clinical synthesis summary
+* Differential diagnoses
+* Information gaps
+* Recommended next clinical actions
+
+The dashboard is generated as:
+
+ClinicalBridge_Report.html
+
+and is automatically opened in the user's default web browser.
+
+This interface was added to improve interpretability and demonstrate how multi-agent outputs can be consolidated into a single clinician-facing view.
+
+---
+
+## End-to-End Prototype Execution
+
+The integrated ClinicalBridge workflow can be executed through:
+
+```bash
+python run_demo.py
+```
+
+Execution flow:
+
+1. User symptom input is provided.
+2. Triage Agent determines urgency and routing.
+3. EHR Agent retrieves relevant patient context.
+4. RPM Agent retrieves available monitoring alerts.
+5. Anamnesis Agent extracts symptom information.
+6. Synthesis Agent generates a physician-review summary.
+7. ClinicalBridge dashboard is generated and displayed.
+
+The final output includes both:
+
+* Console-based structured summaries
+* Interactive HTML dashboard report
+
+---
+
+## Demonstration Scenarios
+
+The prototype was tested using representative clinical scenarios covering multiple urgency levels.
+
+### Case 1 — Emergent Cardiac Event
+
+Input:
+
+Severe chest pain radiating to the left arm, sweating, and shortness of breath.
+
+Expected Outcome:
+
+* P1 EMERGENT
+* Emergency dispatch pathway
+* Physician escalation
+* Critical overall risk
+
+---
+
+### Case 2 — Suspected Stroke
+
+Input:
+
+Sudden facial drooping, slurred speech, and weakness in the right arm.
+
+Expected Outcome:
+
+* P1 EMERGENT
+* Emergency dispatch pathway
+* Immediate physician review
+
+---
+
+### Case 3 — Respiratory Infection
+
+Input:
+
+High fever, productive cough, chest discomfort, and fatigue.
+
+Expected Outcome:
+
+* P2 URGENT
+* Same-day emergency evaluation
+
+---
+
+### Case 4 — Possible Urinary Tract Infection
+
+Input:
+
+Burning sensation while urinating and increased urinary frequency.
+
+Expected Outcome:
+
+* P3 LESS_URGENT
+* Same-day primary-care evaluation
+
+---
+
+### Case 5 — Mild Headache
+
+Input:
+
+Mild headache for two days.
+
+Expected Outcome:
+
+* P4 NON_URGENT
+* Routine primary-care scheduling
+
+---
+
+### Case 6 — Mental Health Crisis
+
+Input:
+
+I have been thinking about harming myself and I do not feel safe being alone.
+
+Expected Outcome:
+
+* P1 EMERGENT
+* Mental-health crisis pathway
+* Immediate escalation
+
+Generated reports for these scenarios are included in the project deliverables.
+
+
 ## Testing
 
 Compile all Python files:
